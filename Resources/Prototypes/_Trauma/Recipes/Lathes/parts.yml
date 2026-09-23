@@ -1,0 +1,35 @@
+﻿# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: latheRecipe
+  abstract: true
+  id: RandomOrgan
+  completetime: 5
+  materials:
+    Biomass: 10
+
+- type: latheRecipe
+  parent: RandomOrgan
+  id: OrganRandomEye
+  result: RandomAbductorEyeSpawner
+
+- type: latheRecipe
+  parent: RandomOrgan
+  id: OrganRandomHeart
+  result: RandomAbductorHeartSpawner
+
+- type: latheRecipe
+  parent: RandomOrgan
+  id: OrganRandomLung
+  result: RandomAbductorLungSpawner
+
+- type: latheRecipe
+  parent: RandomOrgan
+  id: OrganRandomStomach
+  result: RandomAbductorStomachSpawner
+
+- type: latheRecipe
+  parent: RandomOrgan
+  id: OrganRandomAbductorGland
+  result: DubiousOrganSpawner
+  materials:
+    Biomass: 20

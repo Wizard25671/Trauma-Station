@@ -483,3 +483,28 @@
     - blueprint
   - type: Construction
     node: hidden medifab
+
+- type: entity
+  parent: BaseLathe
+  id: AbductorBiofabricator
+  name: abductor biofabricator
+  description: Produces organs that can be surgically implanted inside unwilling experiments
+  components:
+  - type: Sprite
+    sprite: _Shitmed/Structures/Machines/limbgrower.rsi
+    snapCardinals: true
+    layers:
+    - state: limbgrower_idleoff
+      map: ["enum.LatheVisualLayers.IsRunning"]
+  - type: Machine
+    board: AbductorBiofabMachineBoard
+  - type: MaterialStorage
+    whitelist:
+      tags:
+      - Sheet
+      - RawMaterial
+  - type: Lathe
+    idleState: limbgrower_idleoff
+    runningState: limbgrower_idleon
+    staticPacks:
+    - AbductorBiofabPartsStatic

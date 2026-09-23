@@ -1,0 +1,129 @@
+﻿# SPDX-License-Identifier: AGPL-3.0-or-later
+
+- type: entityTable
+  id: RandomAbductorHearts
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      weight: 100
+      children:
+      - id: OrganArachnidHeart
+      - id: OrganVoxHeart
+      - id: OrganAbductorHeart
+      - id: OrganPlasmamanHeart
+      - id: OrganCarpHeart
+      - id: OrganBananaMenHeart
+    - !type:GroupSelector
+      weight: 50
+      children:
+      - id: OrganGoliathHeart
+      - id: OrganCobraHeart
+      - id: XenobioVolatileOrgan # Yes this is a heart replacement
+    - !type:GroupSelector
+      weight: 1
+      children:
+      - id: OrganSlaughterDemonHeart
+      - id: OrganShadowDemonHeart
+
+- type: entityTable
+  id: RandomAbductorEyes
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      weight: 50
+      children:
+      - id: OrganArachnidEyes
+      - id: OrganDionaEyes
+      - id: OrganVoxEyes
+      - id: OrganAbductorEyes
+      - id: OrganPlasmamanEyes
+    - !type:GroupSelector
+      weight: 40
+      children:
+      - id: OrganShadowEyes
+      - id: OrganLaserEyes
+    - !type:GroupSelector
+      weight: 10
+      children:
+      - id: OrganXenomorphEyes
+
+- type: entityTable
+  id: RandomAbductorLungs
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      weight: 80
+      children:
+      - id: OrganVoxLungs
+      - id: OrganBananaMenLungs
+      - id: OrganSlimePersonLungs
+      - id: OrganDecapoidLungs
+      - id: OrganAbductorLungs
+      - id: OrganHumanLungs
+      - id: OrganPlasmamanLungs
+    - !type:GroupSelector
+      weight: 15
+      children:
+      - id: OrganCarpLungs
+      - id: OrganCyberneticLungs
+    - !type:GroupSelector
+      weight: 5
+      children:
+      - id: OrganCyberneticLungsUpgraded
+      - id: OrganDragonLungs
+
+- type: entityTable
+  id: RandomAbductorStomachs
+  table: !type:GroupSelector
+    children:
+    - id: OrganBananaMenStomach
+    - id: OrganAnimalStomachFast
+    - id: OrganArachnidStomach
+    - id: OrganDionaStomach
+    - id: OrganMothStomach
+    - id: OrganReptilianStomach
+    - id: OrganVoxStomach
+    - id: OrganHumanStomach
+    - id: OrganPlasmamanStomach
+    - id: OrganRatKingStomach
+    - id: OrganXenomorphStomach
+
+- type: entity
+  name: Random Abductor Heart Spawner
+  id: RandomAbductorHeartSpawner
+  parent: MarkerBase
+  description: A random heart, Quality not guaranteed
+  components:
+  - type: EntityTableSpawner
+    table: !type:NestedSelector
+      tableId: RandomAbductorHearts
+
+- type: entity
+  name: Random Abductor Eye Spawner
+  id: RandomAbductorEyeSpawner
+  parent: MarkerBase
+  description: A random set of eyes, Quality not guaranteed
+  components:
+  - type: EntityTableSpawner
+    table: !type:NestedSelector
+      tableId: RandomAbductorEyes
+
+- type: entity
+  name: Random Abductor Lung Spawner
+  id: RandomAbductorLungSpawner
+  parent: MarkerBase
+  description: A random set of lungs, Quality not guaranteed
+  components:
+  - type: EntityTableSpawner
+    table: !type:NestedSelector
+      tableId: RandomAbductorLungs
+
+- type: entity
+  name: Random Abductor Stomach Spawner
+  id: RandomAbductorStomachSpawner
+  parent: MarkerBase
+  description: A random stomach, Quality not guaranteed
+  components:
+  - type: EntityTableSpawner
+    table: !type:NestedSelector
+      tableId: RandomAbductorStomachs
