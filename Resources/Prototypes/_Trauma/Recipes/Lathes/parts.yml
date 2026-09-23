@@ -14,11 +14,6 @@
 
 - type: latheRecipe
   parent: RandomOrgan
-  id: OrganRandomHeart
-  result: RandomAbductorHeartSpawner
-
-- type: latheRecipe
-  parent: RandomOrgan
   id: OrganRandomLung
   result: RandomAbductorLungSpawner
 

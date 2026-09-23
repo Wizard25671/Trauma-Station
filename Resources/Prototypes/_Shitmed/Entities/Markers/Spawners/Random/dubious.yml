@@ -40,7 +40,7 @@
 
 
 - type: entity
-  name: Mysterious Gland Spawner
+  name: Mysterious Gland Fabrication
   id: DubiousOrganSpawner
   parent: MarkerBase
   description: A random mysterious gland, Quality not guaranteed

@@ -1,31 +1,6 @@
 ﻿# SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entityTable
-  id: RandomAbductorHearts
-  table: !type:GroupSelector
-    children:
-    - !type:GroupSelector
-      weight: 100
-      children:
-      - id: OrganArachnidHeart
-      - id: OrganVoxHeart
-      - id: OrganAbductorHeart
-      - id: OrganPlasmamanHeart
-      - id: OrganCarpHeart
-      - id: OrganBananaMenHeart
-    - !type:GroupSelector
-      weight: 50
-      children:
-      - id: OrganGoliathHeart
-      - id: OrganCobraHeart
-      - id: XenobioVolatileOrgan # Yes this is a heart replacement
-    - !type:GroupSelector
-      weight: 1
-      children:
-      - id: OrganSlaughterDemonHeart
-      - id: OrganShadowDemonHeart
-
-- type: entityTable
   id: RandomAbductorEyes
   table: !type:GroupSelector
     children:
@@ -89,17 +64,7 @@
     - id: OrganXenomorphStomach
 
 - type: entity
-  name: Random Abductor Heart Spawner
-  id: RandomAbductorHeartSpawner
-  parent: MarkerBase
-  description: A random heart, Quality not guaranteed
-  components:
-  - type: EntityTableSpawner
-    table: !type:NestedSelector
-      tableId: RandomAbductorHearts
-
-- type: entity
-  name: Random Abductor Eye Spawner
+  name: Random Abductor Eye Fabrication
   id: RandomAbductorEyeSpawner
   parent: MarkerBase
   description: A random set of eyes, Quality not guaranteed
@@ -109,7 +74,7 @@
       tableId: RandomAbductorEyes
 
 - type: entity
-  name: Random Abductor Lung Spawner
+  name: Random Abductor Lung Fabrication
   id: RandomAbductorLungSpawner
   parent: MarkerBase
   description: A random set of lungs, Quality not guaranteed
@@ -119,7 +84,7 @@
       tableId: RandomAbductorLungs
 
 - type: entity
-  name: Random Abductor Stomach Spawner
+  name: Random Abductor Stomach Fabrication
   id: RandomAbductorStomachSpawner
   parent: MarkerBase
   description: A random stomach, Quality not guaranteed
