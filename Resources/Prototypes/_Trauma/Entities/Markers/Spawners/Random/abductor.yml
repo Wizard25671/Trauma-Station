@@ -274,7 +274,6 @@
   id: RandomAbductorRightFootSpawner
   parent: MarkerBase
   description: A random right foot, quality not guaranteed
-  sprite: _Trauma/Objects/Specific/Forging/Unfinished/sword_blade.rsi
   components:
   - type: EntityTableSpawner
     table: !type:NestedSelector
