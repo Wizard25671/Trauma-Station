@@ -488,7 +488,7 @@
   parent: BaseLathe
   id: AbductorBiofabricator
   name: abductor biofabricator
-  description: Produces organs that can be surgically implanted inside unwilling experiments
+  description: Produces organs and limbs that can be surgically implanted or attached to unwilling experiments.
   components:
   - type: Sprite
     sprite: _Shitmed/Structures/Machines/limbgrower.rsi

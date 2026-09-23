@@ -2,29 +2,80 @@
 
 - type: latheRecipe
   abstract: true
-  id: RandomOrgan
+  id: RandomOrganBase
   completetime: 5
   materials:
     Biomass: 10
 
 - type: latheRecipe
-  parent: RandomOrgan
+  abstract: true
+  id: RandomLimbBase
+  completetime: 5
+  materials:
+    Biomass: 4
+
+# Organs
+
+- type: latheRecipe
+  parent: RandomOrganBase
   id: OrganRandomEye
   result: RandomAbductorEyeSpawner
 
 - type: latheRecipe
-  parent: RandomOrgan
+  parent: RandomOrganBase
   id: OrganRandomLung
   result: RandomAbductorLungSpawner
 
 - type: latheRecipe
-  parent: RandomOrgan
+  parent: RandomOrganBase
   id: OrganRandomStomach
   result: RandomAbductorStomachSpawner
 
 - type: latheRecipe
-  parent: RandomOrgan
+  parent: RandomOrganBase
   id: OrganRandomAbductorGland
   result: DubiousOrganSpawner
   materials:
     Biomass: 20
+
+# Limbs
+
+- type: latheRecipe
+  parent: RandomLimbBase
+  id: LimbRandomHandRight
+  result: RandomAbductorRightHandSpawner
+
+- type: latheRecipe
+  parent: RandomLimbBase
+  id: LimbRandomArmRight
+  result: RandomAbductorRightArmSpawner
+
+- type: latheRecipe
+  parent: RandomLimbBase
+  id: LimbRandomHandLeft
+  result: RandomAbductorLeftHandSpawner
+
+- type: latheRecipe
+  parent: RandomLimbBase
+  id: LimbRandomArmLeft
+  result: RandomAbductorLeftArmSpawner
+
+- type: latheRecipe
+  parent: RandomLimbBase
+  id: LimbRandomFootRight
+  result: RandomAbductorRightFootSpawner
+
+- type: latheRecipe
+  parent: RandomLimbBase
+  id: LimbRandomLegRight
+  result: RandomAbductorRightLegSpawner
+
+- type: latheRecipe
+  parent: RandomLimbBase
+  id: LimbRandomFootLeft
+  result: RandomAbductorLeftFootSpawner
+
+- type: latheRecipe
+  parent: RandomLimbBase
+  id: LimbRandomLegLeft
+  result: RandomAbductorLeftLegSpawner
